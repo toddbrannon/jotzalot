@@ -24,3 +24,11 @@ body {
      border: 2px solid #ffa000;
      background-color: #ffa000;
 }
+
+.story-text{
+    height:120px;
+}
+
+.dash-status{
+    text-transform:capitalize;
+}

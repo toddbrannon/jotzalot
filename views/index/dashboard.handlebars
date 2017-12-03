@@ -1,2 +1,26 @@
 <h1>Welcome {{user.firstName}}</h1>
 <h4>Your Jotz</h4>
+{{#if stories}}
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each stories}}
+                <tr>
+                    <td><a href="/stories/show/{{id}}">{{title}}</a></td>
+                    <td>{{formatDate data 'MMMM Do YYYY'}}</td>
+                    <td><span class="dash-status">{{status}}</span></td>
+                    <td><a class="btn left-align amber darken-1" href="/stories/edit/{{id}}"><i class="fa fa-pencil"></i> Edit</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <p>You have not created and jotz yet.</p>
+{{/if}}
