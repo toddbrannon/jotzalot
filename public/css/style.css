@@ -36,3 +36,12 @@ body {
 #delete-form{
     display:inline;
 }
+
+.card-story{
+    color:grey;
+    font-weight:thin;
+}
+
+.card-content-date{
+    color:grey;
+}

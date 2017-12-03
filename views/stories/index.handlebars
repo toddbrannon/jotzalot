@@ -1,4 +1,6 @@
 <h1>Jotz</h1>
+<p>Welcome to JotzAlot 1.0.0</p>
+<p>Read Jotz shared by people just like you. Categories coming soon.</p>
 <div class="row">
   {{#each stories}}
     <div class="col s12 m4">
@@ -10,12 +12,16 @@
         </div>
         <div class="card-content center-align">
           <h5>{{title}}</h5>
-          <p class="story-text">{{stripTags (truncate body 150)}}</p>
-          <br>
-          <div class="chip">
+          <div class="card-story">
+              <p class="story-text">{{stripTags (truncate body 150)}}</p>
+          </div>
+            <div class="chip">
             <img src="{{user.image}}">
             {{user.firstName}} {{user.lastName}}
-          </div>
+            </div>
+            <div class="card-content-date">
+              {{formatDate story.date 'MMM D'}}
+            </div>
         </div>
         <div class="card-action center-align">
           <a class="btn grey" href="/stories/show/{{id}}">Read More</a>
